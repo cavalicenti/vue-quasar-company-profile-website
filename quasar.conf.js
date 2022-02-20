@@ -12,7 +12,7 @@ module.exports = function (/* ctx */) {
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/cli-documentation/boot-files
     boot: [
-      
+
       'i18n',
       'axios',
     ],
@@ -102,8 +102,8 @@ module.exports = function (/* ctx */) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'Office Website Using Quasar',
-        short_name: 'Office Website Using Quasar',
+        name: 'Web Acán',
+        short_name: 'Web Acán Digital',
         description: 'Free template for office website.',
         display: 'standalone',
         orientation: 'portrait',

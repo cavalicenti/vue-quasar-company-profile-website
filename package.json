@@ -1,11 +1,11 @@
 {
   "name": "vue-quasar-company-profile-website",
   "version": "0.0.1",
-  "description": "Free template for office website.",
-  "productName": "Company Profile Website Using Quasar",
+  "description": "Acán Digital.",
+  "productName": "Acán",
   "cordovaId": "org.cordova.quasar.app",
   "capacitorId": "",
-  "author": "Mayank Patel",
+  "author": "Acán Digital",
   "private": true,
   "scripts": {
     "test": "echo \"No test specified\" && exit 0"
