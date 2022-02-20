@@ -2,65 +2,66 @@
   <q-layout view="lHh lpr lFf">
     <q-header
       class="q-py-sm"
-      style="background-color: #1c1b21"
+      style="background-color: #FFFFFF"
       :style="'border-bottom: 2px solid ' + theme_color"
     >
       <q-toolbar>
-        <span
-          :style="'font-size: 35px;color:' + theme_color"
-          class="my-font text-h6 q-mr-md"
-          >ACAN</span
-        >
+        <a href="#" @click="scrollToElement('id_home')">
+        <img src="/statics/images/LogoAcan.png"
+          width="180"
+          height="70"
+          />
+</a>
         <q-space></q-space>
-        <q-tabs v-model="selected_tab" shrink>
+        <q-tabs v-model="selected_tab" narrow-indicator>
           <q-tab
-            :style="[selected_tab == 't_0' ? { backgroundColor: theme_color } : {}]"
+            :style="[selected_tab == 't_0' ? {  } : {}]"
             class="q-mr-sm q-py-xs custom_tab"
             @click="scrollToElement('id_portfolio')"
-            style="width: 120px; min-height: auto !important; color: white"
-            label="Portfolio"
+            style="width: 120px; min-height: auto !important; color: #EC6B1C"
+            label="Divisiones"
           />
           <q-tab
-            :style="[selected_tab == 't_1' ? { backgroundColor: theme_color } : {}]"
+            :style="[selected_tab == 't_1' ? {  } : {}]"
             class="q-mr-sm q-py-xs custom_tab"
             @click="scrollToElement('id_about_us')"
-            style="width: 120px; min-height: auto !important; color: white"
-            label="About Us"
+            style="width: 120px; min-height: auto !important; color: #EC6B1C"
+            label="Sobre Nosotros"
           />
           <q-tab
-            :style="[selected_tab == 't_2' ? { backgroundColor: theme_color } : {}]"
+            :style="[selected_tab == 't_2' ? {  } : {}]"
             class="q-mr-sm q-py-xs custom_tab"
             @click="scrollToElement('id_services')"
-            style="width: 120px; min-height: auto !important; color: white"
-            label="Services"
+            style="width: 120px; min-height: auto !important; color: #EC6B1C"
+            label="Servicios"
           />
           <q-tab
-            :style="[selected_tab == 't_3' ? { backgroundColor: theme_color } : {}]"
+            :style="[selected_tab == 't_3' ? {  } : {}]"
             class="q-mr-sm q-py-xs custom_tab"
             @click="scrollToElement('id_testimonial')"
-            style="min-height: auto !important; color: white"
-            label="Testimonial"
+            style="min-height: auto !important; color: #EC6B1C"
+            label="Testimonios"
           />
           <q-tab
-            :style="[selected_tab == 't_4' ? { backgroundColor: theme_color } : {}]"
+            :style="[selected_tab == 't_4' ? {  } : {}]"
             class="q-mr-sm q-py-xs custom_tab"
             @click="scrollToElement('id_team')"
-            style="width: 120px; min-height: auto !important; color: white"
-            label="Team"
+            style="width: 120px; min-height: auto !important; color: #EC6B1C"
+            label="Equipo"
           />
           <q-tab
-            :style="[selected_tab == 't_5' ? { backgroundColor: theme_color } : {}]"
+            :style="[selected_tab == 't_5' ? {} : {}]"
             class="q-mr-sm q-py-xs custom_tab"
             @click="scrollToElement('id_pricing')"
-            style="width: 120px; min-height: auto !important; color: white"
-            label="Pricing"
+            style="width: 120px; min-height: auto !important; color: #EC6B1C"
+            label="Precio"
           />
           <q-tab
-            :style="[selected_tab == 't_6' ? { backgroundColor: theme_color } : {}]"
+            :style="[selected_tab == 't_6' ? {  } : {}]"
             class="q-mr-sm q-py-xs custom_tab"
             @click="scrollToElement('id_news')"
-            style="width: 120px; min-height: auto !important; color: white"
-            label="News"
+            style="width: 120px; min-height: auto !important; color: #EC6B1C"
+            label="Novedades"
           />
           <q-btn class="q-mr-md" size="12px" :style="'min-height:auto !important;background:'+ theme_color +'; color: white; padding:1px'" dense icon="color_lens">
             <q-tooltip transition-show="flip-right"
@@ -78,14 +79,14 @@
               />
             </q-menu>
           </q-btn>
-          <a
+          <!-- <a
             style="font-size: 25px"
             class="float-right q-mr-sm"
             href="https://github.com/sponsors/mayank091193"
             target="_blank"
             title="Donate"
             ><i class="fas fa-heart" style="color: #eb5daa"></i
-          ></a>
+          ></a> -->
         </q-tabs>
       </q-toolbar>
     </q-header>
@@ -105,6 +106,7 @@
           height="639px"
         >
           <q-carousel-slide
+            id="id_home" 
             class="q-pa-none"
             :name="1"
             img-src="/statics/images/image_1.jpg"
@@ -283,10 +285,10 @@
           <div class="row">
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
               <h5 class="text-center">
-                Our Portfolio
+                Divisiones
                 <br />
                 <span class="text-center text-grey text-h6"
-                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</span
+                  >Unidades de negocio y proyectos.</span
                 >
               </h5>
             </div>
@@ -1137,13 +1139,13 @@
           :style="'border-top: 2px solid ' + theme_color"
         >
           <div class="q-pa-sm q-gutter-sm">
-            <q-btn
+            <!-- <q-btn
               round
               type="a"
               href="https://twitter.com/mayank91193"
               :style="'background:' + theme_color + '; color: white !important;'"
               icon="fab fa-twitter"
-            />
+            /> -->
             <q-btn
               round
               type="a"
