@@ -7,11 +7,11 @@
     >
       <q-toolbar>
         <a href="#" @click="scrollToElement('id_home')">
-        <img src="/statics/images/LogoAcan.png"
-          width="180"
-          height="70"
-          />
-</a>
+          <img src="/statics/images/LogoAcan.png"
+            width="180"
+            height="70"
+            />
+        </a>
         <q-space></q-space>
         <q-tabs v-model="selected_tab" narrow-indicator>
           <q-tab
@@ -63,7 +63,7 @@
             style="width: 120px; min-height: auto !important; color: #EC6B1C"
             label="Novedades"
           />
-          <q-btn class="q-mr-md" size="12px" :style="'min-height:auto !important;background:'+ theme_color +'; color: white; padding:1px'" dense icon="color_lens">
+          <!-- <q-btn class="q-mr-md" size="12px" :style="'min-height:auto !important;background:'+ theme_color +'; color: white; padding:1px'" dense icon="color_lens">
             <q-tooltip transition-show="flip-right"
                        transition-hide="flip-left" self="center left" anchor="center right">Theme color
             </q-tooltip>
@@ -78,7 +78,7 @@
                 @input="changeBgColor()"
               />
             </q-menu>
-          </q-btn>
+          </q-btn> -->
           <!-- <a
             style="font-size: 25px"
             class="float-right q-mr-sm"
@@ -92,108 +92,112 @@
     </q-header>
     <q-page-container>
       <q-page>
-        <q-carousel
-          animated
-          v-model="slide"
-          arrows
-          swipeable
-          navigation
-          infinite
-          autoplay
-          control-color="white"
-          transition-prev="slide-right"
-          transition-next="slide-left"
-          height="639px"
-        >
-          <q-carousel-slide
-            id="id_home" 
-            class="q-pa-none"
-            :name="1"
-            img-src="/statics/images/image_1.jpg"
+        <div id="id_home">
+          <q-carousel
+            animated
+            v-model="slide"
+            arrows
+            swipeable
+            navigation
+            infinite
+            autoplay
+            control-color="white"
+            transition-prev="slide-right"
+            transition-next="slide-left"
+            height="639px"
           >
-            <div
-              class="full-height full-width flex flex-center"
-              style="background-color: rgba(0, 0, 0, 0.68) !important"
+            <q-carousel-slide
+              class="q-pa-none"
+              :name="1"
+              img-src="/statics/images/image_1.jpg"
             >
-              <div class="custom-caption">
-                <div class="text-h2 main_line animation_2">
-                  BIENVENIDO A <span :style="'color:' + theme_color">ACÁN</span>
-                </div>
-                <br /><br /><br />
-                <div class="text-h4 animation_1">
-                  La realidad todavía no alcanzó tu sueño. El futuro<br />
-                  puede ser todavía mas grande.
-                </div>
-                <br /><br /><br />
-                <div class="animation_2">
-                  <q-btn
-                    size="md"
-                    :style="'background:' + theme_color + '; color: white'"
-                    label="LEER MÁS"
-                  />
+              <div
+                class="full-height full-width flex flex-center"
+                style="background-color: rgba(0, 0, 0, 0.68) !important"
+              >
+                <div class="custom-caption">
+                  <div class="text-h2 main_line animation_2">
+                    BIENVENIDO A <span :style="'color:#B74B95'">ACÁN</span>
+                  </div>
+                  <br /><br /><br />
+                  <div class="text-h4 animation_1">
+                    La realidad todavía no alcanzó tu sueño. El futuro<br />
+                    puede ser todavía mas grande.
+                  </div>
+                  <br /><br /><br />
+                  <div class="animation_2">
+                    <q-btn
+                      size="md"
+                      :style="'background:#B74B95; color: white'"
+                      label="LEER MÁS"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          </q-carousel-slide>
-          <q-carousel-slide
-            class="q-pa-none"
-            :name="2"
-            img-src="/statics/images/image_2.jpg"
-          >
-            <div
-              class="full-height full-width flex flex-center"
-              style="background-color: rgba(0, 0, 0, 0.68) !important"
+            </q-carousel-slide>
+            <q-carousel-slide
+              class="q-pa-none"
+              :name="2"
+              img-src="/statics/images/image_2.jpg"
             >
-              <div class="custom-caption">
-                <div class="text-h2 main_line animation_2" style="font-size: 65px">
-                  Para emprender tu socio <span :style="'color:' + theme_color">Acán</span>
-                </div>
-                <br /><br /><br />
-                <div class="text-h4 animation_1">
-                  Ya sea que estés planeando, empezando  <br />o tengas tu sueño realizandose, te acompañamos.
-                </div>
-                <br /><br /><br />
-                <div class="animation_2">
-                  <q-btn
-                    size="md"
-                    :style="'background:' + theme_color + '; color: white'"
-                    label="READ MORE"
-                  />
+              <div
+                class="full-height full-width flex flex-center"
+                style="background-color: rgba(0, 0, 0, 0.68) !important"
+              >
+                <div class="custom-caption">
+                  <div class="text-h2 main_line animation_2" style="font-size: 65px">
+                    Para emprender tu socio <span :style="'color: #4096CB'">Acán</span>
+                  </div>
+                  <br /><br /><br />
+                  <div class="text-h4 animation_1">
+                    Ya sea que estés planeando, empezando  <br />o tengas tu sueño realizandose, te acompañamos.
+                  </div>
+                  <br /><br /><br />
+                  <div class="animation_2">
+                    <q-btn
+                      size="md"
+                      :style="'background:#4096CB; color: white'"
+                      label="LEER MAS"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          </q-carousel-slide>
-          <q-carousel-slide
-            class="q-pa-none"
-            :name="3"
-            img-src="/statics/images/image_3.jpg"
-          >
-            <div
-              class="full-height full-width flex flex-center"
-              style="background-color: rgba(0, 0, 0, 0.68) !important"
+            </q-carousel-slide>
+            <q-carousel-slide
+              class="q-pa-none"
+              :name="3"
+              img-src="/statics/images/image_3.jpg"
             >
-              <div class="custom-caption">
-                <div class="text-h2 main_line animation_2" style="font-size: 65px">
-                  EL CAMINO AL <span :style="'color:' + theme_color">ÉXITO</span>
-                </div>
-                <br /><br /><br />
-                <div class="text-h4 animation_1">
-                  Constantemente optimizando para vos <br /> y optimizando para tus clientes.
-                </div>
-                <br /><br /><br />
-                <div class="animation_2">
-                  <q-btn
-                    size="md"
-                    :style="'background:' + theme_color + '; color: white'"
-                    label="LEER MÁS"
-                  />
+              <div
+                class="full-height full-width flex flex-center"
+                style="background-color: rgba(0, 0, 0, 0.68) !important"
+              >
+                <div class="custom-caption">
+                  <div class="text-h2 main_line animation_2" style="font-size: 65px">
+                    EL CAMINO AL <span :style="'color:' + theme_color">ÉXITO</span>
+                  </div>
+                  <br /><br /><br />
+                  <div class="text-h4 animation_1">
+                    Constantemente optimizando para vos <br /> y optimizando para tus clientes.
+                  </div>
+                  <br /><br /><br />
+                  <div class="animation_2">
+                    <q-btn
+                      size="md"
+                      :style="'background:' + theme_color + '; color: white'"
+                      label="LEER MÁS"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          </q-carousel-slide>
-        </q-carousel>
+            </q-carousel-slide>
+          </q-carousel>
+        </div>
+
+
         <div class="row">
-          <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
             <q-card
               class="q-pa-sm flex flex-center text-center box-shadow"
               style="margin: 40px"
@@ -209,7 +213,10 @@
               </q-card-section>
             </q-card>
           </div>
-          <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+
+
+
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
             <q-card
               class="q-pa-sm flex flex-center text-center box-shadow"
               style="margin: 40px"
@@ -225,7 +232,7 @@
               </q-card-section>
             </q-card>
           </div>
-          <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
             <q-card
               class="q-pa-sm flex flex-center text-center box-shadow"
               style="margin: 40px"
@@ -242,7 +249,7 @@
             </q-card>
           </div>
 
-          <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
             <q-card
               class="q-pa-sm flex flex-center text-center box-shadow"
               style="margin: 40px"
@@ -1198,7 +1205,7 @@ export default {
       bg_color: "#EC6B1C",
       hover: false,
       active: false,
-      theme_color: "#EC6B1C)",
+      theme_color: "#EC6B1C",
       background_style: "background-color:rgba(236, 107, 28, 0.7);",
       about_heading_1: [],
       about_heading_2: [],
@@ -1213,7 +1220,7 @@ export default {
       return {
         width: "340px",
         height: "263px",
-        backgroundImage: `url('https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/dev/demo/src/statics/bgimg.jpg')`, // eslint-disable-line
+        backgroundImage: `src/statics/images/1.jpg`, // eslint-disable-line
         textAlign: "center",
         boxShadow: "1px 1px 2px #e6e6e6",
         display: "inline-block",
@@ -1223,7 +1230,7 @@ export default {
       return {
         width: "260px",
         height: "263px",
-        backgroundImage: `url('https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/dev/demo/src/statics/bgimg.jpg')`, // eslint-disable-line
+        backgroundImage: `src/statics/images/1.jpg`, // eslint-disable-line
         textAlign: "center",
         boxShadow: "1px 1px 2px #e6e6e6",
         display: "inline-block",
